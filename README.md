@@ -15,7 +15,7 @@ The LLM is hosted on :hugs: Hugging Face Spaces [here](https://huggingface.co/sp
 Orpheus is a Large Language Model, specifically a *Generative Pre-Trained Transformer*. 
 
 ### What is a Large Language Model? 
-A Large Language Model is a very specific type of Artificial Intelligence that understands and generates human language (like English, for Orpheus). Since computers yet cannot directly be taught all the nuances of Grammar, they are instead fed a large amount of text, and are allowed to 'train' and learn patterns themselves. This has worked for games like Chess before (see AlphaZero). Based on this training, they are benchmarked on a certain set of training data kept aside for validation, and finally released when their performance is good enough. 
+A Large Language Model is a very specific type of Artificial Intelligence that understands and generates human language (like English, for Orpheus). Since computers yet cannot directly be taught all the nuances of Grammar, they are instead fed a large amount of text, and are allowed to 'train' and learn patterns themselves. This has worked for games like Chess (see AlphaZero). Based on this training, they are benchmarked on a certain set of training data kept aside for validation, and finally released when their performance is good enough. 
 
 Essentially, LLMs are prediction machines - they learn to predict the next word given enough context. 
 
@@ -75,4 +75,10 @@ PE(pos, 2i) = sin(pos/1000^2i/d).PE(pos, 2i+1) = cos(pos/1000^2i/d)
 * *Linear transformations involve simple changes to data. For example if you have the numbers (2,7), a linear transformation could involve multiplying this by another value (3) and adding a constant (2), so we get (8, 23). It's called linear because it preserves the 'straight' line relationship between the original and transformed numbers. Non-linear transformations involve more complex patterns, for example, squaring or logarithms. This results in non-linearity as the relationship between the numbers is no longer that of a straight line.
 * **A non-linear transformation function could involve taking the sigmoid (squashes the output between 0 and 1), or in the case of GPT, using ReLU (Rectified Linear Unit). ReLU takes the input and converts all the negative values to 0 and keeps positive values as they are.
 
+## :anchor: Credits
+* A massive thank you to the [Internet Classics Archive](https://classics.mit.edu/) for the translated copy of the Iliad! I have uploaded the original text as well (the original translation, as seen on the website).
+* Another thank you to [Andrej Karpathy](https://www.youtube.com/andrejkarpathy) for not just founding OpenAI but also taking the time out to upload high-quality instructional tutorials online!
 
+## :checkered_flag: How to help?
+* I am fairly new to Large Language Models and Artificial Intelligence in general. I will appreciate any feedback on the code.
+* Please feel free to add on to this README. I have tried to cover everything to the best of my understanding, but there might be problems still!
