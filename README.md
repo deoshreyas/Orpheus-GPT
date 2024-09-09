@@ -43,7 +43,7 @@ Attention(Q, K, V) = softmax(QK^T/\sqrt{d_K})
 *Note 2:* $`d_k`$ is the dimension of the Key vectors.
 
 #### 4. Feed-Forward Networks 
-Each layer in a GPT is a *feed-forward network* that processes the output of the self-attention mechanism. This consists of two linear transformations with a non-linear activation function between them. 
+Each layer in a GPT is a *feed-forward network* that processes the output of the self-attention mechanism. This consists of two linear transformations* with a non-linear activation function** between them. 
 
 ```math
 FFN(x) = ReLU(xW_1 + b_1)W_2 + b_2
@@ -69,4 +69,6 @@ PE(pos, 2i) = sin(pos/1000^2i/d).PE(pos, 2i+1) = cos(pos/1000^2i/d)
 
 #### Additional notes
 * **Nodes** (also called neurons) are the basic units that receive inputs, process them (using mathematical functions), and pass them to the next layer.
-* **Bigram Language Model** is another type of Large Language Models. Orpheus uses a GPT built on top of this type of model. The reason we cannot use Bigram Language models directly anymore is that these only consider the previous word when predicting the next one (they belong to a family called *n-gram models*, and the *bi* suggest two - which means a sequence of two words). So, we could have 'The car is on the' and the model will give 'tree' because it only considers the word 'the.' GPT analyses more information, and thus is more reliable than these simple models.  
+* **Bigram Language Model** is another type of Large Language Models. Orpheus uses a GPT built on top of this type of model. The reason we cannot use Bigram Language models directly anymore is that these only consider the previous word when predicting the next one (they belong to a family called *n-gram models*, and the *bi* suggest two - which means a sequence of two words). So, we could have 'The car is on the' and the model will give 'tree' because it only considers the word 'the.' GPT analyses more information, and thus is more reliable than these simple models.
+* *Linear transformations involve simple changes to data. For example if you have the numbers (2,7), a linear transformation could involve multiplying this by another value (3) and adding another constant (2), so we get (8, 23). It's called linear because it preserves the 'straight' line relationship between the original and transformed numbers. Non-linear transformations involve more complex patterns, for example, squaring or logarithms. This results in non-linearity as the relationship between the numbers is no longer a straight line.
+* **A non-linear transformation function could involve taking the sigmoid (squashes the output between 0 and 1), or in the case of GPT, using ReLU (Rectified Linear Unit). ReLU takes the input and converts all the negative values to 0 and keeps positive values as they are. 
